@@ -36,7 +36,7 @@ EOF
 sudo apt update -y
 
 echo "install docker-ce=${DOCKER_VERSION_STRING}"
-sudo apt install -y \
+sudo apt install -y --allow-downgrades \
   "docker-ce=${DOCKER_VERSION_STRING}" \
   "docker-ce-cli=${DOCKER_VERSION_STRING}" \
   containerd.io \
