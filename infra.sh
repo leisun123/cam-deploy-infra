@@ -18,7 +18,9 @@ if [ -n "${OLD_DOCKER_PKGS}" ]; then
   sudo apt remove -y ${OLD_DOCKER_PKGS}
 fi
 
-sudo apt install -y ca-certificates curl pass gnupg2 tmux python3 python3-pip
+sudo apt install -y \
+  ca-certificates curl pass gnupg2 tmux \
+  python3 python3-pip python3-docopt python3-requests python3-yaml
 
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
